@@ -5,6 +5,11 @@
  */
 package katering;
 
+import controllers.User;
+import java.sql.SQLException;
+import models.UserModel;
+import views.Login;
+
 /**
  *
  * @author ihul
@@ -14,9 +19,8 @@ public class Katering {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        login katering = new login();
-        katering.setVisible(true);
+    public static void main(String[] args) throws SQLException {
+        new User(new Login(),new UserModel());
     }
     
 }
